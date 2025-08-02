@@ -3,16 +3,9 @@ import {products, getProcuct} from '../../data/products.js'
 import { formatCurrency } from '../utils/money.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js'
 import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js'
+import { renderPaymentSummary } from './paymentSummary.js';
 
 //when we export only one thing from our code we use what's called default export and then we don't have to use curly brackets {} in our import statement
-
-
-
-const today = dayjs();
-
-const deliveryDate = today.add(7, 'days')//adds 7 days for todays date
-console.log(deliveryDate.format('dddd, MMMM D'))
-
 
 export function renderOrderSummary(){
 
@@ -131,7 +124,8 @@ export function renderOrderSummary(){
       const container = document.querySelector(
         `.js-cart-item-container-${productId}`
       )
-      container.remove()
+      container.remove();
+      renderPaymentSummary()
 
     });
   });
@@ -141,6 +135,7 @@ export function renderOrderSummary(){
       const {productId, deliveryOptionId} = element.dataset;
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
+      renderPaymentSummary();
 
     });
 
