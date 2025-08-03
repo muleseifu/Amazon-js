@@ -52,6 +52,7 @@ describe('test suite: renderOrderSummary', ()=>{
             deliveryOptionId: '2'
         }]);
                 });
+
         loadFromStorage();  
         renderOrderSummary();
         document.querySelector(`.js-delete-link-${productId1}`).click()
@@ -60,5 +61,6 @@ describe('test suite: renderOrderSummary', ()=>{
         expect(document.querySelector(`.js-cart-item-container-${productId2}`)).not.toEqual(null);  
             document.querySelector('.js-test-container').innerHTML = `      
        `;
+       
     })
 })
