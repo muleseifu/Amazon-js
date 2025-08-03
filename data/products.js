@@ -102,7 +102,10 @@ console.log('load products')
 
   fun();
 
-  } )
+  } );
+  xhr.addEventListener('error', ()=>{
+    console.log('Unexpected error try again letter');
+  })
   xhr.open('GET', 'https://supersimplebackend.dev/products')
   xhr.send();
 
