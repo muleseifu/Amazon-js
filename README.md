@@ -1,35 +1,39 @@
-# Amazon Clone Checkout Page
+# Amazon Checkout & Orders Web App
 
-This project is a simplified Amazon checkout page built with HTML and CSS, designed as a learning exercise for JavaScript. The goal is to practice and improve JavaScript skills by adding interactivity and dynamic features to the checkout process.
+This project is a finished Amazon-style checkout and orders web application. It features a responsive UI, interactive cart, order summary, and order tracking, all built with HTML, CSS, and JavaScript. The project was developed as a learning exercise and now serves as a complete demo of a modern e-commerce checkout flow.
 
 ## Features
-- Responsive Amazon-style checkout layout
-- Product listing with images, prices, and quantity controls
-- Delivery options for each product
+- Responsive Amazon-inspired layout
+- Product listing with images, prices, and quantity selection
+- Add to cart, update quantity, and remove items
+- Delivery options for each product with dynamic date and price
 - Order summary with itemized costs, shipping, tax, and total
-- Clean, modular CSS structure
+- Persistent cart using localStorage
+- Orders page showing past orders and tracking links
+- Tracking page for order status
+- Modular, maintainable code structure
 
 ## Getting Started
 1. Clone or download this repository.
-2. Open `checkout.html` in your browser to view the static page.
-3. All images and styles are included in the project folders.
+2. Open `amazon.html` to browse products and add to cart.
+3. Go to `checkout.html` to review your order, select delivery, and place your order.
+4. View your orders in `orders.html` and track packages in `tracking.html`.
 
-## Next Steps (JavaScript Learning Goals)
-- Make the cart interactive: update quantities, delete items, and recalculate totals
-- Implement delivery option selection and update shipping costs dynamically
-- Add form validation and user feedback
-- Store cart data using localStorage or similar
-- Simulate order placement and confirmation
+## Technologies Used
+- HTML5, CSS3 (modular styles)
+- Vanilla JavaScript (ES6 modules)
+- [dayjs](https://day.js.org/) for date handling
 
 ## Folder Structure
-- `checkout.html`, `amazon.html`, `orders.html`, `tracking.html`: Main HTML pages
+- `amazon.html`, `checkout.html`, `orders.html`, `tracking.html`: Main app pages
 - `styles/`: CSS files for layout and components
 - `images/`: Product, icon, and logo images
-- `backend/`, `data/`: Placeholder for product data (JSON/JS)
+- `data/`, `backend/`: Product and cart data (JSON/JS)
+- `scripts/`: JavaScript modules for app logic
 
-## Why This Project?
-I'm using this project to learn and practice JavaScript by turning a static checkout page into a dynamic, interactive web application. All code is written for educational purposes.
+## About
+This project was created to learn and practice JavaScript by building a fully functional, interactive checkout and orders experience. All code is written for educational and demonstration purposes.
 
 ---
 
-Feel free to fork, contribute, or use this as a starting point for your own learning journey!
+Feel free to fork, use, or extend this project for your own learning or portfolio!
